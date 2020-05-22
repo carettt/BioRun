@@ -1,0 +1,170 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://UI/HealthUI.gd" type="Script" id=1]
+[ext_resource path="res://UI/HeartUIEmpty.png" type="Texture" id=2]
+[ext_resource path="res://UI/HeartUIFull.png" type="Texture" id=3]
+[ext_resource path="res://Items/Glucose.png" type="Texture" id=4]
+[ext_resource path="res://Items/Lipid.png" type="Texture" id=5]
+[ext_resource path="res://UI/OxygenUIEmpty.png" type="Texture" id=6]
+[ext_resource path="res://Items/Protein.png" type="Texture" id=7]
+[ext_resource path="res://UI/PressStart2P-vaV7.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://UI/OxygenUIFull.png" type="Texture" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 13
+font_data = ExtResource( 8 )
+
+[node name="HealthUI" type="Control"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 101.0
+margin_bottom = 19.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hearts" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HeartUIEmpty" type="TextureRect" parent="Hearts"]
+margin_right = 59.0
+margin_bottom = 11.0
+texture = ExtResource( 2 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HeartUIFull" type="TextureRect" parent="Hearts"]
+margin_right = 15.0
+margin_bottom = 11.0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Oxygen" type="Control" parent="."]
+margin_left = 65.0
+margin_right = 105.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OxygenUIEmpty" type="TextureRect" parent="Oxygen"]
+margin_right = 150.0
+margin_bottom = 11.0
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 2
+
+[node name="OxygenUIFull" type="TextureRect" parent="Oxygen"]
+margin_right = 15.0
+margin_bottom = 11.0
+texture = ExtResource( 9 )
+expand = true
+stretch_mode = 2
+
+[node name="Food" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Glucose" type="Control" parent="Food"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Food/Glucose"]
+margin_left = 241.0
+margin_top = -5.0
+margin_right = 257.0
+margin_bottom = 11.0
+rect_scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GlucoseCount" type="Label" parent="Food/Glucose"]
+margin_left = 266.0
+margin_top = 1.0
+margin_right = 302.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 1 )
+text = ":0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lipid" type="Control" parent="Food"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Food/Lipid"]
+margin_left = 218.0
+margin_top = 3.0
+margin_right = 250.0
+margin_bottom = 35.0
+rect_scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LipidCount" type="Label" parent="Food/Lipid"]
+margin_left = 266.0
+margin_top = 24.0
+margin_right = 302.0
+margin_bottom = 37.0
+custom_fonts/font = SubResource( 1 )
+text = ":0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Protein" type="Control" parent="Food"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Food/Protein"]
+margin_left = 241.0
+margin_top = 41.0
+margin_right = 257.0
+margin_bottom = 57.0
+rect_scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProteinCount" type="Label" parent="Food/Protein"]
+margin_left = 266.0
+margin_top = 47.0
+margin_right = 302.0
+margin_bottom = 60.0
+custom_fonts/font = SubResource( 1 )
+text = ":0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
